@@ -16,6 +16,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Wait" />
+        <activity android:name=".BusList"></activity>
     </application>
 
 </manifest>
