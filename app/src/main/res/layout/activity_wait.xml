@@ -48,4 +48,20 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number" />
+
+    <EditText
+        android:id="@+id/edStart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/edEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name" />
 </LinearLayout>

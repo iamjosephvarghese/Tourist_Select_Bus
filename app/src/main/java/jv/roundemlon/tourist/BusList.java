@@ -18,6 +18,20 @@ public class BusList extends AppCompatActivity {
         String a = intent.getExtras().getString("a");
         String b = intent.getExtras().getString("b");
         String c = intent.getExtras().getString("c");
+        String d = intent.getExtras().getString("d");
+        String e = intent.getExtras().getString("e");
+        String f = intent.getExtras().getString("f");
+        String g = intent.getExtras().getString("g");
+        String h = intent.getExtras().getString("h");
+
+
+
+
+
+
+
+
+
 
 //        SimpleDateFormat sdf = new SimpleDateFormat("HHmm");
 //        try {
@@ -32,5 +46,7 @@ public class BusList extends AppCompatActivity {
 //
 //        Toast.makeText(BusList.this,d.toString(),
 //                Toast.LENGTH_LONG).show();
+
+
     }
 }

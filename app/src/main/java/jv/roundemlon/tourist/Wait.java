@@ -24,6 +24,8 @@ public class Wait extends AppCompatActivity {
     EditText ed4;
     EditText ed5;
     EditText ed6;
+    EditText edStart;
+    EditText edEnd;
 
     Button btn2;
 
@@ -52,6 +54,9 @@ public class Wait extends AppCompatActivity {
         ed5 = (EditText)findViewById(R.id.ed5);
         ed6 = (EditText)findViewById(R.id.ed6);
 
+        edStart = (EditText)findViewById(R.id.edStart);
+        edEnd = (EditText)findViewById(R.id.edEnd);
+
 
         btn2 = (Button)findViewById(R.id.btn2);
 
@@ -72,12 +77,20 @@ public class Wait extends AppCompatActivity {
                 String wait6 = ed6.getText().toString();
 
 
+                String start = edStart.getText().toString();
+                String end = edEnd.getText().toString();
+
                 Toast.makeText(Wait.this,wait1+wait2+wait3, Toast.LENGTH_SHORT).show();
 
                 Intent listIntent = new Intent(Wait.this,BusList.class);
                 listIntent.putExtra("a",wait1);
                 listIntent.putExtra("b",wait2);
                 listIntent.putExtra("c",wait3);
+                listIntent.putExtra("d",wait4);
+                listIntent.putExtra("e",wait5);
+                listIntent.putExtra("f",wait6);
+                listIntent.putExtra("g",start);
+                listIntent.putExtra("h",end);
                 startActivity(listIntent);
 
 
