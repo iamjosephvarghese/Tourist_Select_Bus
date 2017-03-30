@@ -39,9 +39,9 @@ public class Wait extends AppCompatActivity {
         setContentView(R.layout.activity_wait);
 
         Intent intent = getIntent();
-        String a = intent.getExtras().getString("a");
-        String b = intent.getExtras().getString("b");
-        String c = intent.getExtras().getString("c");
+        final String a = intent.getExtras().getString("a");
+        final String b = intent.getExtras().getString("b");
+        final String c = intent.getExtras().getString("c");
 
         f1 = Integer.parseInt(a);
         f2 = Integer.parseInt(b);
@@ -91,6 +91,9 @@ public class Wait extends AppCompatActivity {
                 listIntent.putExtra("f",wait6);
                 listIntent.putExtra("g",start);
                 listIntent.putExtra("h",end);
+                listIntent.putExtra("i",a);
+                listIntent.putExtra("j",b);
+                listIntent.putExtra("k",c);
                 startActivity(listIntent);
 
 
