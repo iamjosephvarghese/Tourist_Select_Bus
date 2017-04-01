@@ -29,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        };
+
         ch1 = (CheckBox)findViewById(R.id.ch1);
         ch2 = (CheckBox)findViewById(R.id.ch2);
         ch3 = (CheckBox)findViewById(R.id.ch3);

@@ -30,17 +30,19 @@ public class BusList extends AppCompatActivity {
 
 
     String bName[] = new String[20];
-    String b1[] = new String[20];
-    String b2[] = new String[20];
-    String b3[] = new String[20];
+    String bStart[] = new String[20];
+    String bEnd[] = new String[20];
     String bStartHr[] = new String[20];
     String bStartMin[] = new String[20];
     String bPrice[] = new String[20];
+    String bLoc[] = new String[20];
 
 
     String f1;
     String f2;
     String f3;
+
+    int bLocIndex;
 
 
 
@@ -61,6 +63,26 @@ public class BusList extends AppCompatActivity {
         f1 = intent.getExtras().getString("i");
         f2 = intent.getExtras().getString("j");
         f3 = intent.getExtras().getString("k");
+
+        bLocIndex = 1;
+        if(f1.equals("1")){
+
+            bLoc[bLocIndex] = "1";
+            bLocIndex++;
+
+        }
+        if(f2.equals("1")){
+
+            bLoc[bLocIndex] = "2";
+            bLocIndex++;
+
+        }
+        if(f3.equals("1")){
+
+            bLoc[bLocIndex] = "3";
+            bLocIndex++;
+
+        }
 
 
 
@@ -89,17 +111,40 @@ public class BusList extends AppCompatActivity {
                         String res = dataSnapshot.getValue(String.class);
                         String pa[] = res.split("-");
 
-                        bName[count] = pa[0];
-                        b1[count] = pa[1];
-                        b2[count] = pa[2];
-                        b3[count] = pa[3];
-                        bStartHr[count] = pa[4];
-                        bStartMin[count]= pa[5];
-                        bPrice[count] = pa[6];
+                        for(int i=1;i<=bLocIndex;i++)
+                        {
+                            if(pa[1]==bLoc[i] &&  pa[2]==bLoc[i+1] ){
 
-                        count++;
+                                bName[count] = pa[0];
+                                bStart[count] = pa[1];
+                                bEnd[count] = pa[2];
+                                bStartHr[count] = pa[3];
+                                bStartMin[count]= pa[4];
+                                bPrice[count] = pa[5];
+
+                                count++;
+//                                if(count == countover )
+//                                    trigger();
+
+                            }
+                        }
+
                         if(count == countover )
                             trigger();
+
+
+
+
+//                        bName[count] = pa[0];
+//                        bStart[count] = pa[1];
+//                        bEnd[count] = pa[2];
+//                        bStartHr[count] = pa[3];
+//                        bStartMin[count]= pa[4];
+//                        bPrice[count] = pa[5];
+//
+//                        count++;
+//                        if(count == countover )
+//                            trigger();
 
                     }
 
@@ -143,7 +188,7 @@ public class BusList extends AppCompatActivity {
             Log.d("DEBUG","Triggered");
             Toast.makeText(this, "im here", Toast.LENGTH_SHORT).show();
             BusAdapter adapter2 = new
-                    BusAdapter(BusList.this,bName,b1,b2,b3,bStartHr,bStartMin,bPrice,f1,f2,f3,dummy);
+                    BusAdapter(BusList.this,bName,bStart,bEnd,bStartHr,bStartMin,bPrice,f1,f2,f3,dummy);
             listbus=(ListView)findViewById(R.id.listViewBus);
             listbus.setAdapter(adapter2);
 

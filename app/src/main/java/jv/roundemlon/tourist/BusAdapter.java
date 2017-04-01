@@ -24,33 +24,31 @@ public class BusAdapter extends ArrayAdapter<String> {
 
 
     private final String bName[];
-    private final String b1[];
-    private final String b2[];
-    private final String b3[];
+    private final String bStart[];
+    private final String bEnd[];
     private final String bStartHr[];
     private final String bStartMin[];
     private final String bPrice[];
-    private final String flag1;
-    private final String flag2;
-    private final String flag3;
+    private final String f1;
+    private final String f2;
+    private final String f3;
 
 
 
     public BusAdapter(Activity context,
-                       String[] bName,String[] b1,String[] b2 ,String[] b3,String[] bStartHr, String[] bStartMin,String[] bPrice,String f1, String f2, String f3,String[] dummy) {
+                       String[] bName,String[] bStart,String[] bEnd ,String[] bStartHr, String[] bStartMin,String[] bPrice,String f1, String f2, String f3,String[] dummy) {
         super(context, R.layout.list_bus, dummy);
         this.context = context;
 
         this.bName = bName;
-        this.b1 = b1;
-        this.b2 = b2;
-        this.b3 = b3;
+        this.bStart = bStart;
+        this.bEnd = bEnd;
         this.bStartHr = bStartHr;
         this.bStartMin = bStartMin;
         this.bPrice = bPrice;
-        this.flag1 = flag1;
-        this.flag2 = flag2;
-        this.flag3 = flag3;
+        this.f1 = f1;
+        this.f2 = f2;
+        this.f3 = f3;
 
 
     }
@@ -75,9 +73,8 @@ public class BusAdapter extends ArrayAdapter<String> {
 //        // TextView location = (TextView) rowView.findViewById(R.id.location);
 //        TextView showdate = (TextView) rowView.findViewById(R.id.date);
         busName.setText(bName[position]);
-        loc1.setText(b1[position]);
-        loc2.setText(b2[position]);
-        loc3.setText(b3[position]);
+        loc1.setText(bStart[position]);
+        loc2.setText(bEnd[position]);
         startHr.setText(bStartHr[position]);
         startMin.setText((bStartMin[position]));
         busPrice.setText(bPrice[position]);
