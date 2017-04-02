@@ -204,7 +204,7 @@ public class BusList extends AppCompatActivity {
                         for(int i=0;i<(bLocIndex-1);i++) {
                             for (int j = 0; j <(k-1); j++)
                             {
-                                for(int l = j+1; l < (k); l++){
+
 
 
 
@@ -226,13 +226,13 @@ public class BusList extends AppCompatActivity {
                                 bStartHr[count] = "--";
                                 bStartMin[count] = "--";
 
-                                bPrice[count] = pa[5];
-                                bPrice[count] = "price";
+                                bPrice[count] = pa[7];
+//                                bPrice[count] = "price";
 
                                 count++;
                               }
 
-                            }
+
                           }
                         }
 
