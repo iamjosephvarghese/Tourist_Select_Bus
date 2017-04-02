@@ -64,25 +64,32 @@ public class BusList extends AppCompatActivity {
         f2 = intent.getExtras().getString("j");
         f3 = intent.getExtras().getString("k");
 
-        bLocIndex = 1;
-        if(f1.equals("1")){
+//        bLocIndex = 1;
+//        if(f1.equals("1")){
+//
+//            bLoc[bLocIndex] = "1";
+//            bLocIndex++;
+//
+//        }
+//        if(f2.equals("1")){
+//
+//            bLoc[bLocIndex] = "2";
+//            bLocIndex++;
+//
+//        }
+//        if(f3.equals("1")){
+//
+//            bLoc[bLocIndex] = "3";
+//            bLocIndex++;
+//
+//        }
 
-            bLoc[bLocIndex] = "1";
-            bLocIndex++;
 
-        }
-        if(f2.equals("1")){
+        bLoc[0] = "1";
+        bLoc[1] = "2";
+        bLoc[2] = "3";
+         bLocIndex=2;
 
-            bLoc[bLocIndex] = "2";
-            bLocIndex++;
-
-        }
-        if(f3.equals("1")){
-
-            bLoc[bLocIndex] = "3";
-            bLocIndex++;
-
-        }
 
 
 
@@ -110,10 +117,17 @@ public class BusList extends AppCompatActivity {
                         Log.d("DEBUG","onChildAdded");
                         String res = dataSnapshot.getValue(String.class);
                         String pa[] = res.split("-");
+//                        Log.d("DEBUG","If:");
 
                         for(int i=1;i<=bLocIndex;i++)
                         {
-                            if(pa[1]==bLoc[i] &&  pa[2]==bLoc[i+1] ){
+
+                            Log.d("DEBUG","for");
+//                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
+                            if(pa[1].equals("1") &&  pa[2].equals("2") ){
+
+                                Log.d("DEBUG","If:" + i);
+
 
                                 bName[count] = pa[0];
                                 bStart[count] = pa[1];
@@ -126,10 +140,12 @@ public class BusList extends AppCompatActivity {
 //                                if(count == countover )
 //                                    trigger();
 
+//                                Log.d("DEBUG","If:");
+
                             }
                         }
 
-                        if(count == countover )
+//                        if(count < 10 )
                             trigger();
 
 

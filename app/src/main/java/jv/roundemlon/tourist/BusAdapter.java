@@ -60,7 +60,6 @@ public class BusAdapter extends ArrayAdapter<String> {
         TextView busName = (TextView) rowView.findViewById(R.id.busName);
         TextView loc1 = (TextView)rowView.findViewById(R.id.loc1);
         TextView loc2 = (TextView)rowView.findViewById(R.id.loc2);
-        TextView loc3 = (TextView)rowView.findViewById(R.id.loc3);
         TextView startHr = (TextView)rowView.findViewById(R.id.startHr);
         TextView startMin = (TextView)rowView.findViewById(R.id.startMin);
         TextView busPrice = (TextView)rowView.findViewById(R.id.busPrice);
