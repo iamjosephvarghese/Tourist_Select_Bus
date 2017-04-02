@@ -47,6 +47,8 @@ public class Wait extends AppCompatActivity {
         f2 = Integer.parseInt(b);
         f3 = Integer.parseInt(c);
 
+        Toast.makeText(this,a, Toast.LENGTH_SHORT).show();
+
         ed1 = (EditText)findViewById(R.id.ed1);
         ed2 = (EditText)findViewById(R.id.ed2);
         ed3 = (EditText)findViewById(R.id.ed3);
@@ -54,8 +56,8 @@ public class Wait extends AppCompatActivity {
         ed5 = (EditText)findViewById(R.id.ed5);
         ed6 = (EditText)findViewById(R.id.ed6);
 
-        edStart = (EditText)findViewById(R.id.edStart);
-        edEnd = (EditText)findViewById(R.id.edEnd);
+//        edStart = (EditText)findViewById(R.id.edStart);
+//        edEnd = (EditText)findViewById(R.id.edEnd);
 
 
         btn2 = (Button)findViewById(R.id.btn2);

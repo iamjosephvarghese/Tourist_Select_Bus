@@ -64,33 +64,33 @@ public class BusList extends AppCompatActivity {
         f2 = intent.getExtras().getString("j");
         f3 = intent.getExtras().getString("k");
 
-//        bLocIndex = 1;
-//        if(f1.equals("1")){
-//
-//            bLoc[bLocIndex] = "1";
-//            bLocIndex++;
-//
-//        }
-//        if(f2.equals("1")){
-//
-//            bLoc[bLocIndex] = "2";
-//            bLocIndex++;
-//
-//        }
-//        if(f3.equals("1")){
-//
-//            bLoc[bLocIndex] = "3";
-//            bLocIndex++;
-//
-//        }
+        bLocIndex = 0;
+        if(f1.equals("1")){
+
+            bLoc[bLocIndex] = "1";
+            bLocIndex++;
+
+        }
+        if(f2.equals("1")){
+
+            bLoc[bLocIndex] = "2";
+            bLocIndex++;
+
+        }
+        if(f3.equals("1")){
+
+            bLoc[bLocIndex] = "3";
+            bLocIndex++;
+
+        }
 
 
-        bLoc[0] = "1";
-        bLoc[1] = "2";
-        bLoc[2] = "3";
-        bLoc[3] = "4";
-        bLoc[4] = "5";
-         bLocIndex=4;
+//        bLoc[0] = "1";
+//        bLoc[1] = "2";
+//        bLoc[2] = "3";
+//        bLoc[3] = "4";
+//        bLoc[4] = "5";
+//         bLocIndex=2;
 
 
 

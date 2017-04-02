@@ -3,6 +3,7 @@ package jv.roundemlon.tourist;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -60,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                 result.append(" 1 checked: ")
                         .append(ch1.isChecked());
                 Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_SHORT).show();
             }
         });
         ch2.setOnClickListener(new View.OnClickListener() {
@@ -82,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                 result.append(" 2 checked: ")
                         .append(ch2.isChecked());
                 Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
                 result.append(" 2 checked: ")
                         .append(ch3.isChecked());
                 Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_SHORT).show();
 
 
             }
@@ -123,12 +124,20 @@ public class MainActivity extends AppCompatActivity {
                 String f2 = String.valueOf(flag2);
                 String f3 = String.valueOf(flag3);
 
+                Toast.makeText(MainActivity.this,f1, Toast.LENGTH_SHORT).show();
+
+
+                Log.d("DEBUG","flag1:"+f1);
+                Log.d("DEBUG","flag2:"+f2);
+                Log.d("DEBUG","flag3:"+f3);
+
 
                 Intent waitIntent = new Intent(MainActivity.this,Wait.class);
                 waitIntent.putExtra("a",f1);
                 waitIntent.putExtra("b",f2);
                 waitIntent.putExtra("c",f3);
                 startActivity(waitIntent);
+                finish();
             }
         });
 
