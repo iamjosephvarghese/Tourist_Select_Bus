@@ -88,7 +88,9 @@ public class BusList extends AppCompatActivity {
         bLoc[0] = "1";
         bLoc[1] = "2";
         bLoc[2] = "3";
-         bLocIndex=2;
+        bLoc[3] = "4";
+        bLoc[4] = "5";
+         bLocIndex=4;
 
 
 
@@ -119,12 +121,12 @@ public class BusList extends AppCompatActivity {
                         String pa[] = res.split("-");
 //                        Log.d("DEBUG","If:");
 
-                        for(int i=1;i<=bLocIndex;i++)
+                        for(int i=0;i<bLocIndex;i++)
                         {
 
                             Log.d("DEBUG","for");
 //                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
-                            if(pa[1].equals("1") &&  pa[2].equals("2") ){
+                            if(pa[1].compareTo(bLoc[i]) == 0 &&  pa[2].compareTo(bLoc[i+1]) == 0) {
 
                                 Log.d("DEBUG","If:" + i);
 
