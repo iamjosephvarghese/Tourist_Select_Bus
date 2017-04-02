@@ -27,6 +27,7 @@ public class BusList extends AppCompatActivity {
     String[] dummy;
     int countover = 0;
     int count;
+    int childCount = 0;
 
 
     String bName[] = new String[20];
@@ -35,14 +36,22 @@ public class BusList extends AppCompatActivity {
     String bStartHr[] = new String[20];
     String bStartMin[] = new String[20];
     String bPrice[] = new String[20];
+
+
     String bLoc[] = new String[20];
+    String ltn[] = new String[14];
 
 
     String f1;
     String f2;
     String f3;
+    String f4;
+    String f5;
+    String f6;
 
     int bLocIndex;
+
+    int k =0;
 
 
 
@@ -58,11 +67,14 @@ public class BusList extends AppCompatActivity {
         String d = intent.getExtras().getString("d");
         String e = intent.getExtras().getString("e");
         String f = intent.getExtras().getString("f");
-        String g = intent.getExtras().getString("g");
-        String h = intent.getExtras().getString("h");
+       // String g = intent.getExtras().getString("g");
+       // String h = intent.getExtras().getString("h");
         f1 = intent.getExtras().getString("i");
         f2 = intent.getExtras().getString("j");
         f3 = intent.getExtras().getString("k");
+        f4 = intent.getExtras().getString("l");
+        f5 = intent.getExtras().getString("m");
+        f6 = intent.getExtras().getString("n");
 
         bLocIndex = 0;
         if(f1.equals("1")){
@@ -83,6 +95,31 @@ public class BusList extends AppCompatActivity {
             bLocIndex++;
 
         }
+        if(f4.equals("1")){
+
+            bLoc[bLocIndex] = "4";
+            bLocIndex++;
+
+        }
+        if(f5.equals("1")){
+
+            bLoc[bLocIndex] = "5";
+            bLocIndex++;
+
+        }
+        if(f6.equals("1")){
+
+            bLoc[bLocIndex] = "6";
+            bLocIndex++;
+
+        }
+
+        ///////////
+
+        bLoc[bLocIndex] = "_";
+        bLocIndex++;
+
+        ///////////
 
 
 //        bLoc[0] = "1";
@@ -101,8 +138,8 @@ public class BusList extends AppCompatActivity {
 
         Firebase mRootRef = new Firebase("https://tourist-23bb8.firebaseio.com/");
 
-        busRef = mRootRef.child("bus");
-        numberRef = mRootRef.child("busNum");
+        busRef = mRootRef.child("bus2");
+        numberRef = mRootRef.child("busNum2");
 
 
 
@@ -119,50 +156,99 @@ public class BusList extends AppCompatActivity {
                         Log.d("DEBUG","onChildAdded");
                         String res = dataSnapshot.getValue(String.class);
                         String pa[] = res.split("-");
-//                        Log.d("DEBUG","If:");
 
-                        for(int i=0;i<bLocIndex;i++)
+
+
+
+
+
+//                        for(int i=0;i<bLocIndex;i++)
+//                        {
+//
+//                            Log.d("DEBUG","for");
+////                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
+//                            if(pa[1].compareTo(bLoc[i]) == 0 &&  pa[2].compareTo(bLoc[i+1]) == 0) {
+//
+//                                Log.d("DEBUG","If:" + i);
+//
+//
+//                                bName[count] = pa[0];
+//                                bStart[count] = pa[1];
+//                                bEnd[count] = pa[2];
+//                                bStartHr[count] = pa[3];
+//                                bStartMin[count]= pa[4];
+//                                bPrice[count] = pa[5];
+//
+//                                count++;
+//
+//                            }
+//                        }
+
+
+
+                        for(k =1;k<7;k++)
                         {
-
-                            Log.d("DEBUG","for");
-//                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
-                            if(pa[1].compareTo(bLoc[i]) == 0 &&  pa[2].compareTo(bLoc[i+1]) == 0) {
-
-                                Log.d("DEBUG","If:" + i);
-
-
-                                bName[count] = pa[0];
-                                bStart[count] = pa[1];
-                                bEnd[count] = pa[2];
-                                bStartHr[count] = pa[3];
-                                bStartMin[count]= pa[4];
-                                bPrice[count] = pa[5];
-
-                                count++;
-//                                if(count == countover )
-//                                    trigger();
-
-//                                Log.d("DEBUG","If:");
-
+//                            if(!pa[k].equals("0"))
+                                if(pa[k]!="0")
+                            {
+                                ltn[k-1] = pa[k];
+                                Log.d("DEBUG",pa[k]);
                             }
                         }
 
-//                        if(count < 10 )
+                        ltn[k-1] = "0";
+                        k++;
+
+
+
+                        for(int i=0;i<(bLocIndex-1);i++) {
+                            for (int j = 0; j <(k-1); j++)
+                            {
+                                for(int l = j+1; l < (k); l++){
+
+
+
+
+                                Log.d("DEBUG", "for");
+//                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
+                            if (bLoc[i].compareTo(ltn[j]) == 0 && bLoc[i+1].compareTo(ltn[j+1]) == 0) {
+
+                                Log.d("DEBUG", "If:" + i);
+
+
+                                bName[count] = pa[0];
+//                                bStart[count] = pa[1];
+//                                bEnd[count] = pa[2];
+                                bStart[count] = ltn[j];
+                                bEnd[count] = ltn[j + 1];
+//                                bStartHr[count] = pa[3];
+//                                bStartMin[count] = pa[4];
+                                bStartHr[count] = "--";
+                                bStartMin[count] = "--";
+
+                                bPrice[count] = pa[5];
+                                bPrice[count] = "price";
+
+                                count++;
+                              }
+
+                            }
+                          }
+                        }
+
+
+
+
+                        childCount++;
+
+
+                        if(countover==childCount)
                             trigger();
 
 
 
 
-//                        bName[count] = pa[0];
-//                        bStart[count] = pa[1];
-//                        bEnd[count] = pa[2];
-//                        bStartHr[count] = pa[3];
-//                        bStartMin[count]= pa[4];
-//                        bPrice[count] = pa[5];
-//
-//                        count++;
-//                        if(count == countover )
-//                            trigger();
+
 
                     }
 
