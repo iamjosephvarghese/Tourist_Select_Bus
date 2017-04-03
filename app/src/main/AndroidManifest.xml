@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Wait" />
-        <activity android:name=".BusList"></activity>
+        <activity android:name=".BusList" />
+        <activity android:name=".Details"></activity>
     </application>
 
 </manifest>

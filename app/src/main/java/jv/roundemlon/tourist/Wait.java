@@ -18,13 +18,6 @@ public class Wait extends AppCompatActivity {
     int f6;
 
     EditText ed1;
-    EditText ed2;
-    EditText ed3;
-    EditText ed4;
-    EditText ed5;
-    EditText ed6;
-    EditText edStart;
-    EditText edEnd;
 
     Button btn2;
 
@@ -55,11 +48,7 @@ public class Wait extends AppCompatActivity {
         Toast.makeText(this,a, Toast.LENGTH_SHORT).show();
 
         ed1 = (EditText)findViewById(R.id.ed1);
-        ed2 = (EditText)findViewById(R.id.ed2);
-        ed3 = (EditText)findViewById(R.id.ed3);
-        ed4 = (EditText)findViewById(R.id.ed4);
-        ed5 = (EditText)findViewById(R.id.ed5);
-        ed6 = (EditText)findViewById(R.id.ed6);
+
 
 //        edStart = (EditText)findViewById(R.id.edStart);
 //        edEnd = (EditText)findViewById(R.id.edEnd);
@@ -73,29 +62,21 @@ public class Wait extends AppCompatActivity {
 
                 String wait1 = ed1.getText().toString();
 
-                String wait2 = ed2.getText().toString();
 
-                String wait3 = ed3.getText().toString();
-
-                String wait4 = ed4.getText().toString();
-
-                String wait5 = ed5.getText().toString();
-
-                String wait6 = ed6.getText().toString();
 
 
                 //String start = edStart.getText().toString();
                // String end = edEnd.getText().toString();
 
-                Toast.makeText(Wait.this,wait1+wait2+wait3, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Wait.this,wait1+wait2+wait3, Toast.LENGTH_SHORT).show();
 
                 Intent listIntent = new Intent(Wait.this,BusList.class);
                 listIntent.putExtra("a",wait1);
-                listIntent.putExtra("b",wait2);
-                listIntent.putExtra("c",wait3);
-                listIntent.putExtra("d",wait4);
-                listIntent.putExtra("e",wait5);
-                listIntent.putExtra("f",wait6);
+//                listIntent.putExtra("b",wait2);
+//                listIntent.putExtra("c",wait3);
+//                listIntent.putExtra("d",wait4);
+//                listIntent.putExtra("e",wait5);
+//                listIntent.putExtra("f",wait6);
                // listIntent.putExtra("g",start);
                // listIntent.putExtra("h",end);
                 listIntent.putExtra("i",a);

@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -36,6 +38,11 @@ public class BusList extends AppCompatActivity {
     String bStartHr[] = new String[20];
     String bStartMin[] = new String[20];
     String bPrice[] = new String[20];
+    int price[] =  new int[14];
+    int start[] =  new int[14];
+
+    int diff;
+
 
 
     String bLoc[] = new String[20];
@@ -54,6 +61,14 @@ public class BusList extends AppCompatActivity {
     int k =0;
 
 
+    int A;
+//    int B;
+//    int C;
+//    int D;
+//    int E;
+//    int F;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,12 +76,12 @@ public class BusList extends AppCompatActivity {
         setContentView(R.layout.activity_bus_list);
 
         Intent intent = getIntent();
-        String a = intent.getExtras().getString("a");
-        String b = intent.getExtras().getString("b");
-        String c = intent.getExtras().getString("c");
-        String d = intent.getExtras().getString("d");
-        String e = intent.getExtras().getString("e");
-        String f = intent.getExtras().getString("f");
+        final String a = intent.getExtras().getString("a");
+//         String b = intent.getExtras().getString("b");
+//       String c = intent.getExtras().getString("c");
+//        String d = intent.getExtras().getString("d");
+//       String e = intent.getExtras().getString("e");
+//        String f = intent.getExtras().getString("f");
        // String g = intent.getExtras().getString("g");
        // String h = intent.getExtras().getString("h");
         f1 = intent.getExtras().getString("i");
@@ -75,6 +90,11 @@ public class BusList extends AppCompatActivity {
         f4 = intent.getExtras().getString("l");
         f5 = intent.getExtras().getString("m");
         f6 = intent.getExtras().getString("n");
+
+        try {
+            A = Integer.parseInt(a);
+        }
+        catch (NumberFormatException e1){}
 
         bLocIndex = 0;
         if(f1.equals("1")){
@@ -128,10 +148,6 @@ public class BusList extends AppCompatActivity {
 //        bLoc[3] = "4";
 //        bLoc[4] = "5";
 //         bLocIndex=2;
-
-
-
-
 
 
         Firebase.setAndroidContext(this);
@@ -217,20 +233,38 @@ public class BusList extends AppCompatActivity {
                                         Log.d("DEBUG", "If:" + i);
 
 
-                                        bName[count] = pa[0];
+                                        int start1 = Integer.parseInt(pa[8]);
+
+                                        if(start1 >= (A-1) && start1 <= (A+1)) {
+
+
+                                            bName[count] = pa[0];
 //                                bStart[count] = pa[1];
 //                                bEnd[count] = pa[2];
-                                        bStart[count] = ltn[j];
-                                        bEnd[count] = ltn[j + 1];
+//                                        Log.d("DEBUG",ltn[l]);
+                                            bStart[count] = ltn[j];
+                                            bEnd[count] = ltn[l];
+
+                                            int one = Integer.parseInt(ltn[j]);
+                                            int two = Integer.parseInt(ltn[l]);
+                                            int cost = Integer.parseInt(pa[7]);
+
+                                            diff = two - one;
+
+                                            price[count] = (cost + (10 * diff));
+
+
 //                                bStartHr[count] = pa[3];
 //                                bStartMin[count] = pa[4];
-                                        bStartHr[count] = "--";
-                                        bStartMin[count] = "--";
+                                            bStartHr[count] = "--";
+                                            bStartMin[count] = "--";
 
-                                        bPrice[count] = pa[7];
+//                                        bPrice[count] = pa[7];
+                                            bPrice[count] = String.valueOf(price[count]);
 //                                bPrice[count] = "price";
 
-                                        count++;
+                                            count++;
+                                        }
                                     }
                                 }
                           }
@@ -239,6 +273,9 @@ public class BusList extends AppCompatActivity {
                         childCount++;
                         if(countover==childCount)
                             trigger();
+
+                        if(count == 0)
+                            Toast.makeText(BusList.this,"Bus not available!", Toast.LENGTH_SHORT).show();
 
                     }
 
@@ -271,6 +308,28 @@ public class BusList extends AppCompatActivity {
 
             }
         });
+
+
+
+
+        listbus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+//                        Uri.parse(webUrl[i]));
+//                startActivity(browserIntent);
+
+                Intent clickIntent = new Intent(BusList.this,Details.class);
+                clickIntent.putExtra("pass1",bName[i]);
+                clickIntent.putExtra("pass2",bStart[i]);
+                clickIntent.putExtra("pass3",bEnd[i]);
+                clickIntent.putExtra("pass4",bPrice[i]);
+                startActivity(clickIntent);
+            }
+        });
+
+
+
     }
 
 
