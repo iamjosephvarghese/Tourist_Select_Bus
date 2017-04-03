@@ -148,7 +148,7 @@ public class BusList extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 countover = Integer.parseInt(dataSnapshot.getValue(String.class));
-                dummy= new String[countover];
+
                 count = 0;
                 busRef.addChildEventListener(new ChildEventListener() {
                     @Override
@@ -185,70 +185,60 @@ public class BusList extends AppCompatActivity {
 //                        }
 
 
-
+                        int i=0;
                         for(k =1;k<7;k++)
                         {
 //                            if(!pa[k].equals("0"))
-                                if(pa[k]!="0")
+                            if(!pa[k].equals("0"))
                             {
-                                ltn[k-1] = pa[k];
+                                ltn[i++] = pa[k];
                                 Log.d("DEBUG",pa[k]);
                             }
                         }
 
-                        ltn[k-1] = "0";
-                        k++;
+                        ltn[i] = "0";
+                        i++;
+                        k=i;
 
 
-
-                        for(int i=0;i<(bLocIndex-1);i++) {
+                        for( i=0;i<(bLocIndex-1);i++) {
                             for (int j = 0; j <(k-1); j++)
                             {
 
+                                for(int l =j+1;l<(k-1);l++) {
 
 
-
-
-                                Log.d("DEBUG", "for");
+                                   // Log.d("DEBUG", "for");
 //                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
-                            if (bLoc[i].compareTo(ltn[j]) == 0 && bLoc[i+1].compareTo(ltn[j+1]) == 0) {
-
-                                Log.d("DEBUG", "If:" + i);
 
 
-                                bName[count] = pa[0];
+                                    if (bLoc[i].compareTo(ltn[j]) == 0 && bLoc[i + 1].compareTo(ltn[l]) == 0) {
+
+                                        Log.d("DEBUG", "If:" + i);
+
+
+                                        bName[count] = pa[0];
 //                                bStart[count] = pa[1];
 //                                bEnd[count] = pa[2];
-                                bStart[count] = ltn[j];
-                                bEnd[count] = ltn[j + 1];
+                                        bStart[count] = ltn[j];
+                                        bEnd[count] = ltn[j + 1];
 //                                bStartHr[count] = pa[3];
 //                                bStartMin[count] = pa[4];
-                                bStartHr[count] = "--";
-                                bStartMin[count] = "--";
+                                        bStartHr[count] = "--";
+                                        bStartMin[count] = "--";
 
-                                bPrice[count] = pa[7];
+                                        bPrice[count] = pa[7];
 //                                bPrice[count] = "price";
 
-                                count++;
-                              }
-
-
+                                        count++;
+                                    }
+                                }
                           }
                         }
-
-
-
-
+                        dummy = new String[count];
                         childCount++;
-
-
                         if(countover==childCount)
                             trigger();
-
-
-
-
-
 
                     }
 
@@ -290,7 +280,7 @@ public class BusList extends AppCompatActivity {
         private void trigger() {
 
             Log.d("DEBUG","Triggered");
-            Toast.makeText(this, "im here", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Im here", Toast.LENGTH_SHORT).show();
             BusAdapter adapter2 = new
                     BusAdapter(BusList.this,bName,bStart,bEnd,bStartHr,bStartMin,bPrice,f1,f2,f3,dummy);
             listbus=(ListView)findViewById(R.id.listViewBus);
