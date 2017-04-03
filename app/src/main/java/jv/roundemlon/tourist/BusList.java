@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -312,21 +310,21 @@ public class BusList extends AppCompatActivity {
 
 
 
-        listbus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-//                        Uri.parse(webUrl[i]));
-//                startActivity(browserIntent);
-
-                Intent clickIntent = new Intent(BusList.this,Details.class);
-                clickIntent.putExtra("pass1",bName[i]);
-                clickIntent.putExtra("pass2",bStart[i]);
-                clickIntent.putExtra("pass3",bEnd[i]);
-                clickIntent.putExtra("pass4",bPrice[i]);
-                startActivity(clickIntent);
-            }
-        });
+//        listbus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+////                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+////                        Uri.parse(webUrl[i]));
+////                startActivity(browserIntent);
+//
+//                Intent clickIntent = new Intent(BusList.this,Details.class);
+//                clickIntent.putExtra("pass1",bName[i]);
+//                clickIntent.putExtra("pass2",bStart[i]);
+//                clickIntent.putExtra("pass3",bEnd[i]);
+//                clickIntent.putExtra("pass4",bPrice[i]);
+//                startActivity(clickIntent);
+//            }
+//        });
 
 
 
