@@ -44,7 +44,7 @@ public class BusList extends AppCompatActivity {
 
 
     String bLoc[] = new String[20];
-    String ltn[] = new String[14];
+    String ltn[] = new String[15];
 
 
     String f1;
@@ -53,6 +53,14 @@ public class BusList extends AppCompatActivity {
     String f4;
     String f5;
     String f6;
+    String f7;
+    String f8;
+    String f9;
+    String f10;
+    String f11;
+    String f12;
+    String f13;
+    String f14;
 
     int bLocIndex;
 
@@ -88,6 +96,14 @@ public class BusList extends AppCompatActivity {
         f4 = intent.getExtras().getString("l");
         f5 = intent.getExtras().getString("m");
         f6 = intent.getExtras().getString("n");
+        f7 = intent.getExtras().getString("o");
+        f8 = intent.getExtras().getString("p");
+        f9 = intent.getExtras().getString("q");
+        f10 = intent.getExtras().getString("r");
+        f11 = intent.getExtras().getString("s");
+        f12 = intent.getExtras().getString("t");
+        f13 = intent.getExtras().getString("u");
+        f14 = intent.getExtras().getString("v");
 
         try {
             A = Integer.parseInt(a);
@@ -128,6 +144,62 @@ public class BusList extends AppCompatActivity {
         if(f6.equals("1")){
 
             bLoc[bLocIndex] = "6";
+            bLocIndex++;
+
+        }
+
+        if(f7.equals("1")){
+
+            bLoc[bLocIndex] = "7";
+            bLocIndex++;
+
+        }
+
+        if(f8.equals("1")){
+
+            bLoc[bLocIndex] = "8";
+            bLocIndex++;
+
+        }
+
+        if(f9.equals("1")){
+
+            bLoc[bLocIndex] = "9";
+            bLocIndex++;
+
+        }
+
+        if(f10.equals("1")){
+
+            bLoc[bLocIndex] = "10";
+            bLocIndex++;
+
+        }
+
+        if(f11.equals("1")){
+
+            bLoc[bLocIndex] = "11";
+            bLocIndex++;
+
+        }
+
+        if(f12.equals("1")){
+
+            bLoc[bLocIndex] = "12";
+            bLocIndex++;
+
+        }
+
+        if(f13.equals("1")){
+
+            bLoc[bLocIndex] = "13";
+            bLocIndex++;
+
+        }
+
+        if(f14.equals("1")){
+
+            bLoc[bLocIndex] = "14";
             bLocIndex++;
 
         }
@@ -174,33 +246,16 @@ public class BusList extends AppCompatActivity {
 
 
 
+                        //////change firebase data!!
 
 
-//                        for(int i=0;i<bLocIndex;i++)
-//                        {
-//
-//                            Log.d("DEBUG","for");
-////                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
-//                            if(pa[1].compareTo(bLoc[i]) == 0 &&  pa[2].compareTo(bLoc[i+1]) == 0) {
-//
-//                                Log.d("DEBUG","If:" + i);
-//
-//
-//                                bName[count] = pa[0];
-//                                bStart[count] = pa[1];
-//                                bEnd[count] = pa[2];
-//                                bStartHr[count] = pa[3];
-//                                bStartMin[count]= pa[4];
-//                                bPrice[count] = pa[5];
-//
-//                                count++;
-//
-//                            }
-//                        }
+
+
+
 
 
                         int i=0;
-                        for(k =1;k<7;k++)
+                        for(k =1;k<15;k++)
                         {
 //                            if(!pa[k].equals("0"))
                             if(!pa[k].equals("0"))
@@ -222,8 +277,6 @@ public class BusList extends AppCompatActivity {
                                 for(int l =j+1;l<(k-1);l++) {
 
 
-                                   // Log.d("DEBUG", "for");
-//                            if(pa[1].equals(bLoc[i]) &&  pa[2].equals(bLoc[i+1]) ){
 
 
                                     if (bLoc[i].compareTo(ltn[j]) == 0 && bLoc[i + 1].compareTo(ltn[l]) == 0) {

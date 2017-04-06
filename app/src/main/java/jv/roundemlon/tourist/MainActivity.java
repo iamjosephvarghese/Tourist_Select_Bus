@@ -3,11 +3,9 @@ package jv.roundemlon.tourist;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     CheckBox ch1;
@@ -16,6 +14,14 @@ public class MainActivity extends AppCompatActivity {
     CheckBox ch4;
     CheckBox ch5;
     CheckBox ch6;
+    CheckBox ch7;
+    CheckBox ch8;
+    CheckBox ch9;
+    CheckBox ch10;
+    CheckBox ch11;
+    CheckBox ch12;
+    CheckBox ch13;
+    CheckBox ch14;
 
     int flag1=0;
     int flag2=0;
@@ -23,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
     int flag4=0;
     int flag5=0;
     int flag6=0;
+    int flag7=0;
+    int flag8=0;
+    int flag9=0;
+    int flag10=0;
+    int flag11=0;
+    int flag12=0;
+    int flag13=0;
+    int flag14=0;
 
     int count1=0;
     int count2=0;
@@ -30,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
     int count4=0;
     int count5=0;
     int count6=0;
+    int count7=0;
+    int count8=0;
+    int count9=0;
+    int count10=0;
+    int count11=0;
+    int count12=0;
+    int count13=0;
+    int count14=0;
 
     Button btn1;
 
@@ -53,6 +75,14 @@ public class MainActivity extends AppCompatActivity {
         ch4 = (CheckBox)findViewById(R.id.ch4);
         ch5 = (CheckBox)findViewById(R.id.ch5);
         ch6 = (CheckBox)findViewById(R.id.ch6);
+        ch7 = (CheckBox)findViewById(R.id.ch7);
+        ch8 = (CheckBox)findViewById(R.id.ch8);
+        ch9 = (CheckBox)findViewById(R.id.ch9);
+        ch10 = (CheckBox)findViewById(R.id.ch10);
+        ch11 = (CheckBox)findViewById(R.id.ch11);
+        ch12 = (CheckBox)findViewById(R.id.ch12);
+        ch13 = (CheckBox)findViewById(R.id.ch13);
+        ch14 = (CheckBox)findViewById(R.id.ch14);
 
         ch1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +102,8 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 1 checked: ")
                         .append(ch1.isChecked());
-                Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
             }
         });
         ch2.setOnClickListener(new View.OnClickListener() {
@@ -94,8 +124,8 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 2 checked: ")
                         .append(ch2.isChecked());
-                Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -118,8 +148,8 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 3 checked: ")
                         .append(ch3.isChecked());
-                Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -145,8 +175,8 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 4 checked: ")
                         .append(ch4.isChecked());
-                Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -172,8 +202,8 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 5 checked: ")
                         .append(ch5.isChecked());
-                Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_SHORT).show();
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -199,8 +229,219 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 6 checked: ")
                         .append(ch6.isChecked());
-                Toast.makeText(MainActivity.this, result.toString(),
-                        Toast.LENGTH_SHORT).show();
+                ////Toast.makeText(MainActivity.this, result.toString(),
+                        ////Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+        ch7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count7++;
+
+                if(count7%2==0){
+                    flag7=0;
+                }else{
+                    flag7=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 7 checked: ")
+                        .append(ch7.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+        ch8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count8++;
+
+                if(count8%2==0){
+                    flag8=0;
+                }else{
+                    flag8=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 8checked: ")
+                        .append(ch8.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+        ch9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count9++;
+
+                if(count9%2==0){
+                    flag9=0;
+                }else{
+                    flag9=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 9 checked: ")
+                        .append(ch9.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+
+        ch10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count10++;
+
+                if(count10%2==0){
+                    flag10=0;
+                }else{
+                    flag10=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 10 checked: ")
+                        .append(ch10.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+
+        ch11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count11++;
+
+                if(count11%2==0){
+                    flag11=0;
+                }else{
+                    flag11=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 11 checked: ")
+                        .append(ch11.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+        
+
+        ch12.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count12++;
+
+                if(count12%2==0){
+                    flag12=0;
+                }else{
+                    flag12=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 12 checked: ")
+                        .append(ch12.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+        ch13.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                ch1.setChecked(false);
+//                ch2.setChecked(false);
+
+
+                count13++;
+
+                if(count13%2==0){
+                    flag6=0;
+                }else{
+                    flag13=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 13 checked: ")
+                        .append(ch13.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
+
+
+            }
+        });
+
+        ch14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+
+                count14++;
+
+                if(count14%2==0){
+                    flag14=0;
+                }else{
+                    flag14=1;
+                }
+
+                StringBuffer result = new StringBuffer();
+                result.append(" 14 checked: ")
+                        .append(ch14.isChecked());
+                //Toast.makeText(MainActivity.this, result.toString(),
+                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -221,23 +462,40 @@ public class MainActivity extends AppCompatActivity {
                 String f4 = String.valueOf(flag4);
                 String f5 = String.valueOf(flag5);
                 String f6 = String.valueOf(flag6);
+                String f7 = String.valueOf(flag7);
+                String f8 = String.valueOf(flag8);
+                String f9 = String.valueOf(flag9);
+                String f10 = String.valueOf(flag10);
+                String f11 = String.valueOf(flag11);
+                String f12 = String.valueOf(flag12);
+                String f13 = String.valueOf(flag13);
+                String f14= String.valueOf(flag14);
 
 
-                Toast.makeText(MainActivity.this,f1, Toast.LENGTH_SHORT).show();
+//                Toast.makeText(MainActivity.this,f1, //Toast.LENGTH_SHORT).show();
 
 
-                Log.d("DEBUG","flag1:"+f1);
-                Log.d("DEBUG","flag2:"+f2);
-                Log.d("DEBUG","flag3:"+f3);
+//                Log.d("DEBUG","flag1:"+f1);
+//                Log.d("DEBUG","flag2:"+f2);
+//                Log.d("DEBUG","flag3:"+f3);
 
 
                 Intent waitIntent = new Intent(MainActivity.this,Wait.class);
-                waitIntent.putExtra("a",f1);
-                waitIntent.putExtra("b",f2);
-                waitIntent.putExtra("c",f3);
-                waitIntent.putExtra("d",f4);
-                waitIntent.putExtra("e",f5);
-                waitIntent.putExtra("f",f6);
+                waitIntent.putExtra("1",f1);
+                waitIntent.putExtra("2",f2);
+                waitIntent.putExtra("3",f3);
+                waitIntent.putExtra("4",f4);
+                waitIntent.putExtra("5",f5);
+                waitIntent.putExtra("6",f6);
+                waitIntent.putExtra("7",f5);
+                waitIntent.putExtra("8",f6);
+                waitIntent.putExtra("9",f5);
+                waitIntent.putExtra("10",f6);
+                waitIntent.putExtra("11",f6);
+                waitIntent.putExtra("12",f6);
+                waitIntent.putExtra("13",f6);
+                waitIntent.putExtra("14",f6);
+
                 startActivity(waitIntent);
                 finish();
             }

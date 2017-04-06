@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +7,22 @@
     android:layout_height="match_parent"
     tools:context="jv.roundemlon.tourist.MainActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:id="@+id/linear1">
+
     <CheckBox
         android:id="@+id/ch1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="false"
-        android:text="1"
-        tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="103dp" />
+        android:text="1" />
 
     <CheckBox
         android:id="@+id/ch2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:checked="false"
         android:text="2" />
@@ -47,11 +51,63 @@
         android:layout_height="wrap_content"
         android:checked="false"
         android:text="6" />
+    <CheckBox
+        android:id="@+id/ch7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="7" />
+    <CheckBox
+        android:id="@+id/ch8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="8" />
+    <CheckBox
+        android:id="@+id/ch9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="9" />
 
-    <Button
+        <CheckBox
+            android:id="@+id/ch10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="10" />
+
+        <CheckBox
+        android:id="@+id/ch11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="11" />
+    <CheckBox
+        android:id="@+id/ch12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="12" />
+    <CheckBox
+        android:id="@+id/ch13"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="13" />
+
+        <CheckBox
+            android:id="@+id/ch14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:text="14" />
+
+        <Button
         android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SUBMIT" />
+    </LinearLayout>
 
-</LinearLayout>
+</ScrollView>

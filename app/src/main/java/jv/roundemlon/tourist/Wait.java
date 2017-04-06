@@ -16,6 +16,14 @@ public class Wait extends AppCompatActivity {
     int f4;
     int f5;
     int f6;
+    int f7;
+    int f8;
+    int f9;
+    int f10;
+    int f11;
+    int f12;
+    int f13;
+    int f14;
 
     EditText ed1;
 
@@ -31,12 +39,21 @@ public class Wait extends AppCompatActivity {
         setContentView(R.layout.activity_wait);
 
         Intent intent = getIntent();
-        final String a = intent.getExtras().getString("a");
-        final String b = intent.getExtras().getString("b");
-        final String c = intent.getExtras().getString("c");
-        final String d = intent.getExtras().getString("d");
-        final String e = intent.getExtras().getString("e");
-        final String f = intent.getExtras().getString("f");
+        final String a = intent.getExtras().getString("1");
+        final String b = intent.getExtras().getString("2");
+        final String c = intent.getExtras().getString("3");
+        final String d = intent.getExtras().getString("4");
+        final String e = intent.getExtras().getString("5");
+        final String f = intent.getExtras().getString("6");
+        final String g = intent.getExtras().getString("7");
+        final String h = intent.getExtras().getString("8");
+        final String i = intent.getExtras().getString("9");
+        final String j = intent.getExtras().getString("10");
+        final String k = intent.getExtras().getString("11");
+        final String l = intent.getExtras().getString("12");
+        final String m = intent.getExtras().getString("13");
+        final String n = intent.getExtras().getString("14");
+
 
         f1 = Integer.parseInt(a);
         f2 = Integer.parseInt(b);
@@ -44,6 +61,14 @@ public class Wait extends AppCompatActivity {
         f4 = Integer.parseInt(d);
         f5 = Integer.parseInt(e);
         f6 = Integer.parseInt(f);
+        f7 = Integer.parseInt(g);
+        f8 = Integer.parseInt(h);
+        f9 = Integer.parseInt(i);
+        f10 = Integer.parseInt(j);
+        f11 = Integer.parseInt(k);
+        f12 = Integer.parseInt(l);
+        f13 = Integer.parseInt(m);
+        f14 = Integer.parseInt(n);
 
         Toast.makeText(this,a, Toast.LENGTH_SHORT).show();
 
@@ -85,6 +110,14 @@ public class Wait extends AppCompatActivity {
                 listIntent.putExtra("l",d);
                 listIntent.putExtra("m",e);
                 listIntent.putExtra("n",f);
+                listIntent.putExtra("o",a);
+                listIntent.putExtra("p",b);
+                listIntent.putExtra("q",c);
+                listIntent.putExtra("r",d);
+                listIntent.putExtra("s",e);
+                listIntent.putExtra("t",f);
+                listIntent.putExtra("u",e);
+                listIntent.putExtra("v",f);
                 startActivity(listIntent);
 
 
