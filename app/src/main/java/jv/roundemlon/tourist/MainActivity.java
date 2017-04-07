@@ -487,14 +487,14 @@ public class MainActivity extends AppCompatActivity {
                 waitIntent.putExtra("4",f4);
                 waitIntent.putExtra("5",f5);
                 waitIntent.putExtra("6",f6);
-                waitIntent.putExtra("7",f5);
-                waitIntent.putExtra("8",f6);
-                waitIntent.putExtra("9",f5);
-                waitIntent.putExtra("10",f6);
-                waitIntent.putExtra("11",f6);
-                waitIntent.putExtra("12",f6);
-                waitIntent.putExtra("13",f6);
-                waitIntent.putExtra("14",f6);
+                waitIntent.putExtra("7",f7);
+                waitIntent.putExtra("8",f8);
+                waitIntent.putExtra("9",f9);
+                waitIntent.putExtra("10",f10);
+                waitIntent.putExtra("11",f11);
+                waitIntent.putExtra("12",f12);
+                waitIntent.putExtra("13",f13);
+                waitIntent.putExtra("14",f14);
 
                 startActivity(waitIntent);
                 finish();

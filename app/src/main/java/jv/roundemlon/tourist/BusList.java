@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -30,9 +32,9 @@ public class BusList extends AppCompatActivity {
     int childCount = 0;
 
 
-    String bName[] = new String[20];
-    String bStart[] = new String[20];
-    String bEnd[] = new String[20];
+    String bName[] = new String[30];
+    String bStart[] = new String[30];
+    String bEnd[] = new String[30];
     String bStartHr[] = new String[20];
     String bStartMin[] = new String[20];
     String bPrice[] = new String[20];
@@ -73,6 +75,23 @@ public class BusList extends AppCompatActivity {
 //    int D;
 //    int E;
 //    int F;
+
+    String district[] = {
+            "Thiruvananthapuram",
+            "Kollam",
+            "Alappuzha",
+            "Pathanamthitta",
+            "Kottayam",
+            "Idukki",
+            "Ernakulam",
+            "Thrissur",
+            "Palakkad",
+            "Malappuram",
+            "Kozhikode",
+            "Wayanad",
+            "Kannur",
+            "Kasargod"
+    };
 
 
 
@@ -204,28 +223,19 @@ public class BusList extends AppCompatActivity {
 
         }
 
-        ///////////
+
 
         bLoc[bLocIndex] = "_";
         bLocIndex++;
 
-        ///////////
-
-
-//        bLoc[0] = "1";
-//        bLoc[1] = "2";
-//        bLoc[2] = "3";
-//        bLoc[3] = "4";
-//        bLoc[4] = "5";
-//         bLocIndex=2;
 
 
         Firebase.setAndroidContext(this);
 
         Firebase mRootRef = new Firebase("https://tourist-23bb8.firebaseio.com/");
 
-        busRef = mRootRef.child("bus2");
-        numberRef = mRootRef.child("busNum2");
+        busRef = mRootRef.child("bus");
+        numberRef = mRootRef.child("busNum");
 
 
 
@@ -245,19 +255,9 @@ public class BusList extends AppCompatActivity {
 
 
 
-
-                        //////change firebase data!!
-
-
-
-
-
-
-
                         int i=0;
                         for(k =1;k<15;k++)
                         {
-//                            if(!pa[k].equals("0"))
                             if(!pa[k].equals("0"))
                             {
                                 ltn[i++] = pa[k];
@@ -284,7 +284,8 @@ public class BusList extends AppCompatActivity {
                                         Log.d("DEBUG", "If:" + i);
 
 
-                                        int start1 = Integer.parseInt(pa[8]);
+//                                        int start1 = Integer.parseInt(pa[8]);
+                                        int start1 = Integer.parseInt(pa[16]);
 
                                         if(start1 >= (A-1) && start1 <= (A+1)) {
 
@@ -293,20 +294,24 @@ public class BusList extends AppCompatActivity {
 //                                bStart[count] = pa[1];
 //                                bEnd[count] = pa[2];
 //                                        Log.d("DEBUG",ltn[l]);
-                                            bStart[count] = ltn[j];
-                                            bEnd[count] = ltn[l];
+//                                            bStart[count] = ltn[j];
+//                                            bEnd[count] = ltn[l];
+
+                                            bStart[count] = district[(Integer.parseInt(ltn[j])-1)];
+                                            bEnd[count] = district[(Integer.parseInt(ltn[l])-1)];
 
                                             int one = Integer.parseInt(ltn[j]);
                                             int two = Integer.parseInt(ltn[l]);
-                                            int cost = Integer.parseInt(pa[7]);
+//                                            int cost = Integer.parseInt(pa[7]);
+                                            int cost = Integer.parseInt(pa[15]);
+
 
                                             diff = two - one;
 
                                             price[count] = (cost + (10 * diff));
 
 
-//                                bStartHr[count] = pa[3];
-//                                bStartMin[count] = pa[4];
+
                                             bStartHr[count] = "--";
                                             bStartMin[count] = "--";
 
@@ -360,27 +365,6 @@ public class BusList extends AppCompatActivity {
             }
         });
 
-
-
-
-//        listbus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-////                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-////                        Uri.parse(webUrl[i]));
-////                startActivity(browserIntent);
-//
-//                Intent clickIntent = new Intent(BusList.this,Details.class);
-//                clickIntent.putExtra("pass1",bName[i]);
-//                clickIntent.putExtra("pass2",bStart[i]);
-//                clickIntent.putExtra("pass3",bEnd[i]);
-//                clickIntent.putExtra("pass4",bPrice[i]);
-//                startActivity(clickIntent);
-//            }
-//        });
-
-
-
     }
 
 
@@ -395,6 +379,20 @@ public class BusList extends AppCompatActivity {
                     BusAdapter(BusList.this,bName,bStart,bEnd,bStartHr,bStartMin,bPrice,f1,f2,f3,dummy);
             listbus=(ListView)findViewById(R.id.listViewBus);
             listbus.setAdapter(adapter2);
+
+
+            listbus.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    Intent clickIntent = new Intent (BusList.this,Details.class);
+                    clickIntent.putExtra("pass1",bName[i]);
+                    clickIntent.putExtra("pass2",bStart[i]);
+                    clickIntent.putExtra("pass3",bEnd[i]);
+                    clickIntent.putExtra("pass4",bPrice[i]);
+                    startActivity(clickIntent);
+                }
+            });
+
 
 
         }

@@ -110,14 +110,14 @@ public class Wait extends AppCompatActivity {
                 listIntent.putExtra("l",d);
                 listIntent.putExtra("m",e);
                 listIntent.putExtra("n",f);
-                listIntent.putExtra("o",a);
-                listIntent.putExtra("p",b);
-                listIntent.putExtra("q",c);
-                listIntent.putExtra("r",d);
-                listIntent.putExtra("s",e);
-                listIntent.putExtra("t",f);
-                listIntent.putExtra("u",e);
-                listIntent.putExtra("v",f);
+                listIntent.putExtra("o",g);
+                listIntent.putExtra("p",h);
+                listIntent.putExtra("q",i);
+                listIntent.putExtra("r",j);
+                listIntent.putExtra("s",k);
+                listIntent.putExtra("t",l);
+                listIntent.putExtra("u",m);
+                listIntent.putExtra("v",n);
                 startActivity(listIntent);
 
 

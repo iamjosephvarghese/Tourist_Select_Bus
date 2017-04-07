@@ -16,13 +16,6 @@ public class BusAdapter extends ArrayAdapter<String> {
     private final Activity context;
 
 
-
-//    private final String[] pName;
-//    private final String[] pTime;
-//    private final String[] pRank;
-//    private final String[] pClg;
-
-
     private final String bName[];
     private final String bStart[];
     private final String bEnd[];
@@ -63,14 +56,7 @@ public class BusAdapter extends ArrayAdapter<String> {
         TextView startHr = (TextView)rowView.findViewById(R.id.startHr);
         TextView startMin = (TextView)rowView.findViewById(R.id.startMin);
         TextView busPrice = (TextView)rowView.findViewById(R.id.busPrice);
-//        ImageView imageView1 = (ImageView) rowView.findViewById(R.id.img1);
-//
-//        TextView txt2 = (TextView) rowView.findViewById(R.id.txt2result);
-//        TextView sc2 = (TextView)rowView.findViewById(R.id.sc2);
-//        ImageView imageView2 = (ImageView) rowView.findViewById(R.id.img2);
-//
-//        // TextView location = (TextView) rowView.findViewById(R.id.location);
-//        TextView showdate = (TextView) rowView.findViewById(R.id.date);
+
         busName.setText(bName[position]);
         loc1.setText(bStart[position]);
         loc2.setText(bEnd[position]);
@@ -79,18 +65,6 @@ public class BusAdapter extends ArrayAdapter<String> {
         busPrice.setText(bPrice[position]);
 
 
-
-//        // sc1.setText(String.valueOf(passThree[position]));
-//
-//        Log.d("LOGGER",passThree[position]+"");
-//        imageView1.setImageResource(imageId[passOne[position]]);
-//
-//        txt2.setText(teamName[passTwo[position]]);
-//        sc2.setText(String.valueOf(passFour[position]));
-//        imageView2.setImageResource(imageId[passTwo[position]]);
-//
-//        //location.setText(stadium[passThree[position]]);
-//        showdate.setText(passFive[position]);
 
 
         return rowView;
