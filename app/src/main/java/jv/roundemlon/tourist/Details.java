@@ -5,6 +5,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+/**
+ * Created by Joseph on 30/03/17.
+ */
+
+
 public class Details extends AppCompatActivity {
 
     TextView t1;

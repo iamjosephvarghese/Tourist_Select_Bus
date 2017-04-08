@@ -16,6 +16,11 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 
+/**
+ * Created by Joseph on 30/03/17.
+ */
+
+
 public class BusList extends AppCompatActivity {
 
 
@@ -39,7 +44,7 @@ public class BusList extends AppCompatActivity {
     String bStartMin[] = new String[20];
     String bPrice[] = new String[20];
     int price[] =  new int[14];
-    int start[] =  new int[14];
+    //int start[] =  new int[14];
 
     int diff;
 
@@ -70,11 +75,6 @@ public class BusList extends AppCompatActivity {
 
 
     int A;
-//    int B;
-//    int C;
-//    int D;
-//    int E;
-//    int F;
 
     String district[] = {
             "Thiruvananthapuram",
@@ -102,13 +102,7 @@ public class BusList extends AppCompatActivity {
 
         Intent intent = getIntent();
         final String a = intent.getExtras().getString("a");
-//         String b = intent.getExtras().getString("b");
-//       String c = intent.getExtras().getString("c");
-//        String d = intent.getExtras().getString("d");
-//       String e = intent.getExtras().getString("e");
-//        String f = intent.getExtras().getString("f");
-       // String g = intent.getExtras().getString("g");
-       // String h = intent.getExtras().getString("h");
+
         f1 = intent.getExtras().getString("i");
         f2 = intent.getExtras().getString("j");
         f3 = intent.getExtras().getString("k");
@@ -284,25 +278,18 @@ public class BusList extends AppCompatActivity {
                                         Log.d("DEBUG", "If:" + i);
 
 
-//                                        int start1 = Integer.parseInt(pa[8]);
                                         int start1 = Integer.parseInt(pa[16]);
 
                                         if(start1 >= (A-1) && start1 <= (A+1)) {
 
 
                                             bName[count] = pa[0];
-//                                bStart[count] = pa[1];
-//                                bEnd[count] = pa[2];
-//                                        Log.d("DEBUG",ltn[l]);
-//                                            bStart[count] = ltn[j];
-//                                            bEnd[count] = ltn[l];
 
                                             bStart[count] = district[(Integer.parseInt(ltn[j])-1)];
                                             bEnd[count] = district[(Integer.parseInt(ltn[l])-1)];
 
                                             int one = Integer.parseInt(ltn[j]);
                                             int two = Integer.parseInt(ltn[l]);
-//                                            int cost = Integer.parseInt(pa[7]);
                                             int cost = Integer.parseInt(pa[15]);
 
 
@@ -315,9 +302,7 @@ public class BusList extends AppCompatActivity {
                                             bStartHr[count] = "--";
                                             bStartMin[count] = "--";
 
-//                                        bPrice[count] = pa[7];
                                             bPrice[count] = String.valueOf(price[count]);
-//                                bPrice[count] = "price";
 
                                             count++;
                                         }

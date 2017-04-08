@@ -7,6 +7,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 
+/**
+ * Created by Joseph on 30/03/17.
+ */
+
+
 public class MainActivity extends AppCompatActivity {
     CheckBox ch1;
     CheckBox ch2;
@@ -88,8 +93,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                ch2.setChecked(false);
-//                ch3.setChecked(false);
 
                 count1++;
 
@@ -102,16 +105,14 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 1 checked: ")
                         .append(ch1.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
+
             }
         });
         ch2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-//                ch1.setChecked(false);
-//                ch3.setChecked(false);
+
 
                 count2++;
 
@@ -124,8 +125,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 2 checked: ")
                         .append(ch2.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
             }
         });
@@ -133,8 +132,7 @@ public class MainActivity extends AppCompatActivity {
         ch3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
+
 
 
                 count3++;
@@ -148,8 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 3 checked: ")
                         .append(ch3.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
+
 
 
             }
@@ -160,8 +157,6 @@ public class MainActivity extends AppCompatActivity {
         ch4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
 
 
                 count4++;
@@ -175,8 +170,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 4 checked: ")
                         .append(ch4.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -187,9 +180,6 @@ public class MainActivity extends AppCompatActivity {
         ch5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
-
 
                 count5++;
 
@@ -202,9 +192,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 5 checked: ")
                         .append(ch5.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
-
 
             }
         });
@@ -214,8 +201,6 @@ public class MainActivity extends AppCompatActivity {
         ch6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
 
 
                 count6++;
@@ -229,8 +214,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 6 checked: ")
                         .append(ch6.isChecked());
-                ////Toast.makeText(MainActivity.this, result.toString(),
-                        ////Toast.LENGTH_SHORT).show();
+
 
 
             }
@@ -241,8 +225,6 @@ public class MainActivity extends AppCompatActivity {
         ch7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
 
 
                 count7++;
@@ -256,8 +238,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 7 checked: ")
                         .append(ch7.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
+
 
 
             }
@@ -268,8 +249,7 @@ public class MainActivity extends AppCompatActivity {
         ch8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
+
 
 
                 count8++;
@@ -283,8 +263,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 8checked: ")
                         .append(ch8.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -295,9 +273,6 @@ public class MainActivity extends AppCompatActivity {
         ch9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
-
 
                 count9++;
 
@@ -310,8 +285,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 9 checked: ")
                         .append(ch9.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
+
 
 
             }
@@ -322,8 +296,7 @@ public class MainActivity extends AppCompatActivity {
         ch10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
+
 
 
                 count10++;
@@ -337,8 +310,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 10 checked: ")
                         .append(ch10.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -348,8 +319,7 @@ public class MainActivity extends AppCompatActivity {
         ch11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
+
 
 
                 count11++;
@@ -363,8 +333,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 11 checked: ")
                         .append(ch11.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -375,8 +343,7 @@ public class MainActivity extends AppCompatActivity {
         ch12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
+
 
 
                 count12++;
@@ -390,8 +357,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 12 checked: ")
                         .append(ch12.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -400,8 +365,7 @@ public class MainActivity extends AppCompatActivity {
         ch13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                ch1.setChecked(false);
-//                ch2.setChecked(false);
+
 
 
                 count13++;
@@ -415,8 +379,6 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 13 checked: ")
                         .append(ch13.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
 
 
             }
@@ -440,8 +402,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuffer result = new StringBuffer();
                 result.append(" 14 checked: ")
                         .append(ch14.isChecked());
-                //Toast.makeText(MainActivity.this, result.toString(),
-                        //Toast.LENGTH_SHORT).show();
+
 
 
             }
@@ -472,12 +433,6 @@ public class MainActivity extends AppCompatActivity {
                 String f14= String.valueOf(flag14);
 
 
-//                Toast.makeText(MainActivity.this,f1, //Toast.LENGTH_SHORT).show();
-
-
-//                Log.d("DEBUG","flag1:"+f1);
-//                Log.d("DEBUG","flag2:"+f2);
-//                Log.d("DEBUG","flag3:"+f3);
 
 
                 Intent waitIntent = new Intent(MainActivity.this,Wait.class);

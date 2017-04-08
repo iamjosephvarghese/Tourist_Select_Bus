@@ -8,6 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * Created by Joseph on 30/03/17.
+ */
+
+
 public class Wait extends AppCompatActivity {
 
     int f1;
@@ -29,9 +34,7 @@ public class Wait extends AppCompatActivity {
 
     Button btn2;
 
-//    DateFormat formatter = new SimpleDateFormat("dd/MM/yyyy"); // Make sure user insert date into edittext in this format.
-//
-//    Date dateObject;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,8 +78,7 @@ public class Wait extends AppCompatActivity {
         ed1 = (EditText)findViewById(R.id.ed1);
 
 
-//        edStart = (EditText)findViewById(R.id.edStart);
-//        edEnd = (EditText)findViewById(R.id.edEnd);
+
 
 
         btn2 = (Button)findViewById(R.id.btn2);
@@ -90,20 +92,10 @@ public class Wait extends AppCompatActivity {
 
 
 
-                //String start = edStart.getText().toString();
-               // String end = edEnd.getText().toString();
-
-//                Toast.makeText(Wait.this,wait1+wait2+wait3, Toast.LENGTH_SHORT).show();
 
                 Intent listIntent = new Intent(Wait.this,BusList.class);
                 listIntent.putExtra("a",wait1);
-//                listIntent.putExtra("b",wait2);
-//                listIntent.putExtra("c",wait3);
-//                listIntent.putExtra("d",wait4);
-//                listIntent.putExtra("e",wait5);
-//                listIntent.putExtra("f",wait6);
-               // listIntent.putExtra("g",start);
-               // listIntent.putExtra("h",end);
+
                 listIntent.putExtra("i",a);
                 listIntent.putExtra("j",b);
                 listIntent.putExtra("k",c);
